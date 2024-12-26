@@ -5,7 +5,6 @@ import { Strategy as JwtStrategy, ExtractJwt } from "passport-jwt";
 import { createHashUtil, verifyHashUtil } from "../utils/hash.util.js";
 import { createTokenUtil } from "../utils/token.util.js";
 import { usersRepository } from "../repositories/index.js";
-import sendSms from "../utils/twilio.util.js";
 import { sendVerifyEmail } from "../utils/nodemailer.utils.js";
 
 passport.use(
