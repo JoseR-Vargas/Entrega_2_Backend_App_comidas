@@ -46,9 +46,6 @@ passport.use(
       try {
         const user = await usersRepository.readByEmail(email);
         if (!user) {
-          // const error = new Error("USER NOT FOUND");
-          // error.statusCode = 401;
-          // return done(error);
           const info = { message: "User not found!", statusCode: 401 };
           return done(null, false, info);
         }
@@ -56,13 +53,10 @@ passport.use(
           const info = {message: "You need to verify your account"}
           return done(null, false,info);
         }
-        const passwordForm = password; /* req.body.password */
+        const passwordForm = password; 
         const passwordDb = user.password;
         const verify = verifyHashUtil(passwordForm, passwordDb);
         if (!verify) {
-          // const error = new Error("INVALID CREDENTIALS");
-          // error.statusCode = 401;
-          // return done(error);
           const info = { message: "Invalid credentials", statusCode: 401 };
           return done(null, false, info);
         }
@@ -95,9 +89,6 @@ passport.use(
         const user = await usersRepository.readOne(user_id);
         const { isOnline } = user;
         if (!isOnline) {
-          // const error = new Error("USER IS NOT ONLINE");
-          // error.statusCode = 401;
-          // return done(error);
           const info = { message: "User is not online", statusCode: 401 };
           return done(null, false, info);
         }

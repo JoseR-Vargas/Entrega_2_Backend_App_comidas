@@ -7,8 +7,6 @@ class CustomRouter {
     this._router = Router();
   }
   getRouter = () => this._router;
-  // applyCallbacks() depende de todos los middlewares que necesite ejecutar
-  // mapeamos los middlewares para que se ejecuten cada uno con (req, res, next)
   _applyCallbacks = (callbacks) =>
     callbacks.map((cb) => async (req, res, next) => {
       try {
