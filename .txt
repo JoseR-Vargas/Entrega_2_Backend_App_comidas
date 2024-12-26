@@ -1,3 +1,12 @@
+PORT = 8080
+MONGO_LINK = "mongodb+srv://coder_70280:Lgmd2233.@cluster0.cfpeb.mongodb.net/CoderHouse-prod"
+SECRET_KEY = "c00ki3s"
+SBASE_URL = "http://localhost:8080/api/"
+PERSISTENCE = "mongo"
+
+GOOGLE_EMAIL = "jrvn.dev@gmail.com"
+GOOGLE_PASS = "zwdb eglb zkbw vxve"
+
 1) Register 
 
 localhost:8080/api/auth/register
