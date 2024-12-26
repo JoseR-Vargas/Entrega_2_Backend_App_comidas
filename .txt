@@ -1,0 +1,29 @@
+1) Register 
+
+localhost:8080/api/auth/register
+
+{"email": "",
+"password": ""}
+
+2) Verify en postman 
+
+localhost:8080/api/auth/verify
+
+{"email": "",
+"verifyCode": ""
+}
+
+3) Login 
+
+localhost:8080/api/auth/login
+
+{"email": "",
+"password": ""}
+
+4) Online 
+
+localhost:8080/api/auth/online
+
+5) Sign Out 
+
+localhost:8080/api/auth/signout
